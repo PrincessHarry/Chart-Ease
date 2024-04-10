@@ -1,0 +1,113 @@
+{% load static %}  
+
+	<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>Chart System</title>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+   <script src="https://kit.fontawesome.com/ed7eb456dc.js" crossorigin="anonymous"></script>
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+   <link rel='stylesheet' type='text/css' media='screen' href="{% static 'style.css' %}">
+</head>
+<body>
+
+    {% block nav %}
+
+<nav class="navbar navbar-expand-lg navbar-light ">
+    <a class="navbar-brand" href="#">ChartEase</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+   
+     <div class="hamburger-menu">
+      <div class="bar top"></div>
+      <div class="bar middle"></div>
+      <div class="bar bottom"></div>
+    </div>
+   </button>
+   <div class="collapse navbar-collapse" id="navbarSupportedContent">
+       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+           <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+           {% if request.user.is_authenticated %}
+           <a class="nav-link" href="{% url 'profile' %}">Profile</a>
+           <a href="{% url 'logout' %}"  class= "sign btn btn-primary py-2 px-4 ms-3">Logout</a>
+           {% else %}
+           <a href="{% url 'signin' %}"  class="nav-link">Login</a>
+           <a href="{% url 'signup' %}"  class=" sign btn btn-primary py-2 px-4 ms-3">Register</a>
+           {% endif %}
+       </ul>
+    </div>
+  </nav>
+{% endblock %}
+
+
+{% block content %}
+
+
+{% endblock %}
+
+
+{% block footer %}
+
+<footer class="footer-section bg-dark text-light py-3">
+    <div class="container">
+        <div class="row">
+            <!-- Contact Information -->
+            <div class="col-md-4">
+                <h4>Contact Us</h4>
+                <p>Email: info@infinitydata.com</p>
+                <p>Phone: +234 7032318369</p>
+            </div>
+            <!-- Privacy Policy and Terms of Service -->
+            <div class="col-md-4">
+                <h4>Legal</h4>
+                <ul class="legal-links">
+                    <li><a href="#privacy-policy">Privacy Policy</a></li>
+                    <li><a href="#terms-of-service">Terms of Service</a></li>
+                </ul>
+            </div>
+            <!-- Privacy Policy and Terms of Service -->
+            <div class="col-md-4">
+                <h4>quick links</h4>
+                <ul class="quick-links">
+                    <li><a href="#">Data bundle</a></li>
+                    <li><a href="#">Quiz</a></li>
+                    <li><a href="#">Contest</a></li>
+                </ul>
+            </div>
+            
+
+            <!-- Social Media Links -->
+            <div class="col-md-4">
+                <h4>Connect with Us</h4>
+                <ul class="social-media-list">
+                    <span><a href="#" target="_blank"><i class="fab fa-facebook"></i></a></span>
+                    <span><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></span>
+                    
+                    <!-- Add more social media icons and links as needed -->
+                </ul>
+            </div>
+            <div class="container text-center">
+                <p>&copy; 2024 Infinity Data. All rights reserved.</p>
+              </div>
+            
+        </div>
+    </div>
+</footer>
+  
+{% endblock footer %}
+  
+
+<script src="./typed.js-master/lib/typed.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+<script type="text/javascript" src="{% static 'scripts/script.js'%}"></script>
+</body>
+</html>
+
+ 

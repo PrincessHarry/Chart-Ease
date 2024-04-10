@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto');
+* ::before,
+*::after{
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;   
+    
+}
+
+:root{
+  --primary-color:#C93ABF;
+  --secondary-color: ;
+  --Highlight: ;
+  --heading:#001f3f;
+  --text: #898989;
+  --white: #FFFFFF;
+  --black:#000;
+  --transition: all 0.5s ease-in-out;
+}
+
+
+.navbar {
+  /* position: fixed; */
+  width: 100%;
+  --bs-navbar-color:#1e1d1d;
+  background-color:#ffffff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+
+.navbar-brand{
+  /* width: 290px;
+  position: absolute;
+  top: -120px;
+  left: 10px; */
+  /* left:-60px; */
+  margin-left: 50px;
+}
+.navbar-toggler {
+  display: none;
+}
+ .hamburger-menu {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  height: 2.1rem;
+  width: 2rem;
+  cursor: pointer;
+  margin-right: 1rem;
+ 
+}
+
+ .hamburger-menu .bar {
+  height: 5px;
+  background: var(--primary-color);
+  border-radius: 5px;
+  margin: 3px 0px;
+  transform-origin: left;
+  transition: all 0.5s;
+}
+
+ .hamburger-menu:hover .top {
+  transform: rotate(45deg);
+}
+
+ .hamburger-menu:hover .middle {
+  opacity: 0;
+}
+
+ .hamburger-menu:hover .bottom {
+  transform: rotate(-45deg);
+}
+ .navbar-nav{
+  
+  margin-left: 850px;
+  color: #1e1d1d;
+  
+}
+
+@media (max-width:855px){
+ .navbar-toggler {
+      display: block;
+      margin-right: 1rem;
+      border: none;
+  }
+ .navbar-nav{
+      /* margin-left: 40px; */
+      margin: 30px 0 0 30px;
+  }
+} 
+
+.btn-primary{
+	background-color: var(--primary-color);
+	border:none;
+}
+.btn-primary:hover{
+	background-color: var(--primary-color);
+	border: none;
+}
+/* form */
+
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* home */
+svg {
+    max-width: 100%;
+    height: auto;
+    margin-top: 50px;
+  }
+  
+  .features {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.features h2 {
+    margin-bottom: 20px;
+}
+
+.feature {
+    margin-bottom: 40px;
+}
+
+.testimonials {
+    background-color: #f4f4f4;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.testimonial {
+    margin-bottom: 40px;
+}
+
